@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ea0e28c-5042-471a-a791-b1960b88caf0" name="Changes" comment="ok">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/java-mongo-db-introduction.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="2ea0e28c-5042-471a-a791-b1960b88caf0" name="Changes" comment="ok" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,9 +45,10 @@
     "Application.com.mongodb.quickstart.HelloMongoDb.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "corretto-11",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction",
+    "last_opened_file_path": "/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +69,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/mongodb/db" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -145,6 +136,7 @@
       <workItem from="1706051390615" duration="9835000" />
       <workItem from="1706062446324" duration="1391000" />
       <workItem from="1706063848015" duration="906000" />
+      <workItem from="1706064764358" duration="295000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <option name="closed" value="true" />
