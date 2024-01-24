@@ -13,7 +13,6 @@ import java.util.Random;
 import java.util.List;
 
 public class Create {
-    Connection conn;
 
     protected static Document insert(){
         Random rand = new Random();
@@ -25,7 +24,8 @@ public class Create {
                         new Document("type","homework").append("score",rand.nextDouble()*100),
                         new Document("type","homework").append("score",rand.nextDouble()*100),
                         new Document("type", "joaozinho").append("score",100),
-                        new Document("type", "miguelzinho").append("score",90)));
+                        new Document("type", "miguelzinho").append("score",90),
+                        new Document("type","gabi").append("score",87)));
         return student;
     }
     public static void create(){
