@@ -1,2 +1,2 @@
-.env
-/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db/Connection.java
+src/main/java/com/mongodb/db/Connection.java
+src/main/java/com/mongodb/db/.env
