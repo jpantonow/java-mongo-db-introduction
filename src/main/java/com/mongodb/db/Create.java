@@ -13,7 +13,6 @@ import java.util.Random;
 import java.util.List;
 
 public class Create {
-
     protected static Document insert(){
         Random rand = new Random();
         Document student = new Document("_id", new ObjectId());
