@@ -13,7 +13,7 @@ import java.util.Random;
 import java.util.List;
 
 public class Create extends Connection{
-    protected Document insert(){
+    protected Document insert(String... values){
         Random rand = new Random();
         Document student = new Document("_id", new ObjectId());
         student.append("student_id",10000d)
