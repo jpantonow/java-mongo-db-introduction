@@ -11,7 +11,7 @@ import static com.mongodb.client.model.Filters.*;
 import static com.mongodb.client.model.Projections.*;
 import static com.mongodb.client.model.Sorts.descending;
 
-public class Read {
+public class Read extends Connection {
 
     public void read_one(String doc){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){

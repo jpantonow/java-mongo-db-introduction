@@ -16,7 +16,7 @@ import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.*;
 
-public class Update {
+public class Update extends Connection{
     protected JsonWriterSettings prettyPrint = JsonWriterSettings.builder().indent(true).build();
     public void update_one(String pk){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){

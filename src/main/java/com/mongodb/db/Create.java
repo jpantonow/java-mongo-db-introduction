@@ -12,8 +12,8 @@ import javax.print.Doc;
 import java.util.Random;
 import java.util.List;
 
-public class Create {
-    protected static Document insert(){
+public class Create extends Connection{
+    protected Document insert(){
         Random rand = new Random();
         Document student = new Document("_id", new ObjectId());
         student.append("student_id",10000d)
@@ -27,8 +27,8 @@ public class Create {
                         new Document("type","gabi").append("score",87)));
         return student;
     }
-    public static void create(){
-        try(MongoClient mongoclient = MongoClients.create(Connection.connection)) {
+    public void creation(){
+        try(MongoClient mongoclient = MongoClients.create(Create.connection)) {
             MongoDatabase sample = mongoclient.getDatabase("sample_training");
             MongoCollection<Document> gradesCollection = sample.getCollection("grades");
             Document student = insert();

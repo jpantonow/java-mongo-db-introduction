@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ea0e28c-5042-471a-a791-b1960b88caf0" name="Changes" comment="ok">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/quickstart/HelloMongoDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/tests/HelloMongoDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Create.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Crud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Delete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Insert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Read.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/crud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/tests/HelloMongoDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/tests/MongoTesting.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +99,7 @@
       <recent name="com.mongodb" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.mongodb.tests.HelloMongoDb">
+  <component name="RunManager" selected="Application.MongoTesting">
     <configuration name="HelloMongoDb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HelloMongoDb" />
       <module name="java-quick-start" />
@@ -105,6 +110,32 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="src" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MongoTesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="mongourl" value="mongodb+srv://juventus:realmadridpai@cluster0.sju0aha.mongodb.net/" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.mongodb.tests.MongoTesting" />
+      <module name="java-quick-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mongodb.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,41 +167,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.mongodb.tests.HelloMongoDb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <envs>
-        <env name="mongourl" value="mongodb+srv://juventus:realmadridpai@cluster0.sju0aha.mongodb.net/" />
-      </envs>
-      <option name="MAIN_CLASS_NAME" value="com.mongodb.tests.HelloMongoDb" />
-      <module name="java-quick-start" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mongodb.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-        </ENTRIES>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.com.mongodb.tests.HelloMongoDb" />
+      <item itemvalue="Application.MongoTesting" />
       <item itemvalue="Application.HelloMongoDb" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Viewer" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.mongodb.tests.HelloMongoDb" />
+        <item itemvalue="Application.MongoTesting" />
         <item itemvalue="Application.Viewer" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.HelloMongoDb" />
@@ -199,7 +204,7 @@
       <workItem from="1706063848015" duration="906000" />
       <workItem from="1706064764358" duration="295000" />
       <workItem from="1706115282746" duration="11109000" />
-      <workItem from="1706220472814" duration="1463000" />
+      <workItem from="1706220472814" duration="4339000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <option name="closed" value="true" />

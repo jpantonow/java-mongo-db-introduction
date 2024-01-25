@@ -12,7 +12,7 @@ import org.bson.json.JsonWriterSettings;
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Filters.gte;
 
-public class Delete {
+public class Delete extends Connection{
     public void delete(String doc){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){
             MongoDatabase sample = mongoclient.getDatabase("sample_training");

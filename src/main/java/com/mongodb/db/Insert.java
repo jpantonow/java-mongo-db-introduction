@@ -11,6 +11,6 @@ import org.bson.types.ObjectId;
 import javax.print.Doc;
 import java.util.Random;
 import java.util.List;
-public class Insert {
+public class Insert extends Connection {
 
 }
