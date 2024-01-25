@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ea0e28c-5042-471a-a791-b1960b88caf0" name="Changes" comment="ok">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/user/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/user/Viewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mongodb/user/Viewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mongodb/user/Viewer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -52,7 +53,7 @@
     "Application.com.mongodb.quickstart.HelloMongoDb.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "updates",
     "jdk.selected.JAVA_MODULE": "corretto-11",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db",
@@ -165,9 +166,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Viewer" />
-        <item itemvalue="Application.com.mongodb.quickstart.HelloMongoDb" />
-        <item itemvalue="Application.HelloMongoDb" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.HelloMongoDb" />
+        <item itemvalue="Application.com.mongodb.quickstart.HelloMongoDb" />
+        <item itemvalue="Application.Viewer" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +193,7 @@
       <workItem from="1706062446324" duration="1391000" />
       <workItem from="1706063848015" duration="906000" />
       <workItem from="1706064764358" duration="295000" />
-      <workItem from="1706115282746" duration="8715000" />
+      <workItem from="1706115282746" duration="10341000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <option name="closed" value="true" />
@@ -206,6 +208,44 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ok" />
