@@ -19,10 +19,4 @@ public class Connection {
             return null;
         }
     }
-    static boolean preFlightChecks(MongoClient mongoClient){
-        Document pingCommand = new Document("ping", 1);
-        Document response = mongoClient.getDatabase("juventus").runCommand(pingCommand);
-        response.toJson(JsonWriterSettings.builder().indent(true).build());
-        return response.getDouble("ok").equals(1.0);
-    }
 }

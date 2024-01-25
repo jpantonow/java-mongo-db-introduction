@@ -6,7 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/src/main/java/java.iml" filepath="$PROJECT_DIR$/src/main/java/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/main/java/com/mongodb/mongodb.iml" filepath="$PROJECT_DIR$/src/main/java/com/mongodb/mongodb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/main/java/com/mongodb/quickstart/quickstart.iml" filepath="$PROJECT_DIR$/src/main/java/com/mongodb/quickstart/quickstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/java/com/mongodb/tests/quickstart.iml" filepath="$PROJECT_DIR$/src/main/java/com/mongodb/tests/quickstart.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/src.iml" filepath="$PROJECT_DIR$/src/src.iml" />
     </modules>
   </component>

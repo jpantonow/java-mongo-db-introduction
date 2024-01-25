@@ -1,5 +1,4 @@
-package com.mongodb.quickstart;
-import com.mongodb.db.Connection;
+package com.mongodb.tests;
 import com.mongodb.db.Create;
 
 public class HelloMongoDb {
