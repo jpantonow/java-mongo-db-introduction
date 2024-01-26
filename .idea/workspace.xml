@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ea0e28c-5042-471a-a791-b1960b88caf0" name="Changes" comment="ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Crud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mongodb/db/Crud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mongodb/db/Crud.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +202,7 @@
       <workItem from="1706064764358" duration="295000" />
       <workItem from="1706115282746" duration="11109000" />
       <workItem from="1706220472814" duration="14003000" />
-      <workItem from="1706266427079" duration="196000" />
+      <workItem from="1706266427079" duration="511000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <option name="closed" value="true" />

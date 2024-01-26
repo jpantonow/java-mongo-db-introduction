@@ -21,28 +21,28 @@ public class Update extends Connection{
     protected JsonWriterSettings prettyPrint = JsonWriterSettings.builder().indent(true).build();
     public void update_one(Student obj){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){
-            MongoDatabase sample = mongoclient.getDatabase("sample_training");
-            MongoCollection<Document> gradesCollection = sample.getCollection("grades");
-            Bson filter = eq("student_id", 10000);
-            Bson updateop = set("comment", "You should learn MongoDB");
+            MongoDatabase sample = mongoclient.getDatabase("mongo_java");
+            MongoCollection<Document> gradesCollection = sample.getCollection("school");
+            Bson filter = eq("id", obj.getId());
+            Bson updateop = set("comment", "");
             UpdateResult updateres = gradesCollection.updateOne(filter,updateop);
-            System.out.println("=> Updating the doc with {\"student_id\":10000}. Adding comment.");
-            System.out.println(gradesCollection.find(filter).first().toJson(prettyPrint));
-            System.out.println(updateres);
+//            System.out.println("=> Updating the doc with {\"student_id\":10000}. Adding comment.");
+//            System.out.println(gradesCollection.find(filter).first().toJson(prettyPrint));
+//            System.out.println(updateres);
         }
         catch (MongoException e){
             e.printStackTrace();
         }
     }
-    public void update_many(String pk){
+    public void update_many(Student obj){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){
-            MongoDatabase sample = mongoclient.getDatabase("sample_training");
-            MongoCollection<Document> gradesCollection = sample.getCollection("grades");
-            Bson filter = eq("student_id", 10000);
-            Bson updateop = set("comment", "You should learn MongoDB");
+            MongoDatabase sample = mongoclient.getDatabase("mongo_java");
+            MongoCollection<Document> gradesCollection = sample.getCollection("school");
+            Bson filter = eq("id", obj.getId());
+            Bson updateop = set("comment", "");
             UpdateResult updateres = gradesCollection.updateMany(filter,updateop);
-            System.out.println("\n=> Updating all the documents with {\"student_id\":10001}.");
-            System.out.println(updateres);
+//            System.out.println("\n=> Updating all the documents with {\"student_id\":10001}.");
+//            System.out.println(updateres);
         }
         catch (MongoException e){
             e.printStackTrace();
