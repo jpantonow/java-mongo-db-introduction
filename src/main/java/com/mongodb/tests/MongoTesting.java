@@ -10,16 +10,19 @@ import java.util.Scanner;
 public class MongoTesting {
     public static void main(String[] args){
     Screen screen = new Screen();
-    Integer op = screen.Operations();
+    //Integer op = screen.Operations();
 
     Student student = new Student();
-    student = screen.screenInsert(student);
+    //student = screen.screenInsert(student);
 
     Crud crud = new Crud();
 
     //crud.create();
-    crud.insert(student);
+    //crud.insert(student);
     //crud.update(student);
+    student.setId(1);
+    Double average = crud.avg(student);
+    System.out.println(String.format("Average=%.2f", average));
     System.out.println("Done");
     }
 }

@@ -7,6 +7,7 @@ import com.mongodb.client.model.Accumulators;
 import com.mongodb.client.model.Aggregates;
 import com.mongodb.client.model.Filters;
 import com.mongodb.user.Student;
+import org.bson.BsonDocument;
 import org.bson.Document;
 
 import java.util.ArrayList;
@@ -41,14 +42,17 @@ public class Read extends Connection {
             MongoDatabase sample = mongoclient.getDatabase("mongo_java");
             MongoCollection<Document> gradesCollection = sample.getCollection("school");
 
-            Document student1 = gradesCollection.find(new Document("id",obj.getId())).first();
-            DBObject group = new BasicDBObject("id",obj.getId());
-            group.put("avg", new BasicDBObject("$avg","$pop"));
-            DBObject grades = new BasicDBObject("$group", group);
-            AggregateIterable<Document> avg = gradesCollection.aggregate(Arrays.asList(
-                    Aggregates.group(Filters.eq("id",obj.getId()),
-                            Accumulators.avg("average","$grades"))));
-            return parseDouble(avg.iterator().next().toJson());
+            AggregateIterable<Document> avg = gradesCollection.aggregate(
+                    Arrays.asList(Aggregates.match(
+                            Filters.eq("id",obj.getId())),
+                    Aggregates.unwind("$grades"),
+                    Aggregates.group("$id",
+                            Accumulators.avg("average","$grades"))
+                            ));
+
+            String average = avg.iterator().next().get("average").toString();
+            return parseDouble(average);
+            //return parseDouble(avg.iterator().next().get("average"));
         }
         catch (MongoException e){
             e.printStackTrace();
