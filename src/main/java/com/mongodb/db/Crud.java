@@ -1,6 +1,7 @@
 package com.mongodb.db;
 
-import com.mongodb.MongoException;
+
+import com.mongodb.user.Student;
 
 public class Crud implements crud{
     protected Connection connection;
@@ -30,7 +31,7 @@ public class Crud implements crud{
         return false;
     }
     }
-    public <T> boolean insert(T obj){
+    public boolean insert(Student obj){
         try{
             this.create = new Create();
             create.insert();
@@ -40,7 +41,7 @@ public class Crud implements crud{
             return false;
         }
     }
-    public <T> boolean update(T obj){
+    public boolean update(Student obj){
         try{
             this.update = new Update();
             update.find_and_update("");
@@ -50,7 +51,7 @@ public class Crud implements crud{
             return false;
         }
     }
-    public <T> boolean view(T obj){
+    public boolean view(Student obj){
         try{
             this.read = new Read();
             read.read_one("");
@@ -60,7 +61,7 @@ public class Crud implements crud{
             return false;
         }
     }
-    public <T> boolean delete(T obj){
+    public boolean delete(Student obj){
         try{
             this.delete = new Delete();
             delete.find_and_delete("");
