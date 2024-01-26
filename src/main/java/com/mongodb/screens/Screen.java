@@ -17,6 +17,21 @@ public class Screen {
         Scanner sc = new Scanner(System.in);
         return sc.nextInt();
     }
+    public Integer screenFind(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Write the student's Id:");
+        return sc.nextInt();
+    }
+    public Integer screenDelete(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Write the student's Id:");
+        return sc.nextInt();
+    }
+    public String screenDrop(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Write the table's name:");
+        return sc.next();
+    }
     public Student screenInsert(Student obj){
         ArrayList<Double> grades = new ArrayList<>();
 
@@ -26,6 +41,22 @@ public class Screen {
         obj.setId(sc.nextInt());
         System.out.println("Name: ");
         obj.setName(sc.next());
+        System.out.println("Class:");
+        obj.setClasses(sc.next());
+        System.out.println("1st exam:");
+        grades.add(sc.nextDouble());
+        System.out.println("2nd exam:");
+        grades.add(sc.nextDouble());
+        System.out.println("3rd exam:");
+        grades.add(sc.nextDouble());
+        obj.setGrades(grades);
+        return obj;
+    }
+    public Student screenUpdate(Student obj){
+        ArrayList<Double> grades = new ArrayList<>();
+
+        System.out.println("Fill the values below: ");
+        Scanner sc = new Scanner(System.in);
         System.out.println("Class:");
         obj.setClasses(sc.next());
         System.out.println("1st exam:");
