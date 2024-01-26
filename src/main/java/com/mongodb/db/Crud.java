@@ -44,7 +44,7 @@ public class Crud implements crud{
     public boolean update(Student obj){
         try{
             this.update = new Update();
-            update.find_and_update("");
+            update.find_and_update(obj);
             return true;
         }
         catch (Exception e){

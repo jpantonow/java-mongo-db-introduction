@@ -49,15 +49,14 @@ public class Update extends Connection{
         }
     }
 
-    public void find_and_update(String pk){
+    public void find_and_update(Student obj){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){
-            MongoDatabase sample = mongoclient.getDatabase("sample_training");
-            MongoCollection<Document> gradesCollection = sample.getCollection("grades");
-            Bson filter = eq("student_id", 10000);
-            Bson up1 = inc("x",10);
-            Bson up2 = rename("class_id","new_class_id");
-            Bson up3 = mul("scores.0.score",2);
-            Bson updates = combine(up1,up2,up3);
+            MongoDatabase sample = mongoclient.getDatabase("mongo_java");
+            MongoCollection<Document> gradesCollection = sample.getCollection("school");
+            Bson filter = eq("id", obj.getId());
+            Bson new_class = set("class", obj.getClasses());
+            //Bson new_grades = set("grades")
+            Bson updates = combine(new_class);
 
             //Old version
             Document oldversion = gradesCollection.findOneAndUpdate(filter,updates);
