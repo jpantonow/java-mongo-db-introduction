@@ -2,6 +2,7 @@ package com.mongodb.user;
 import java.util.ArrayList;
 public class Student {
     protected Integer id;
+    protected Integer classes;
     protected String name;
     protected ArrayList<Float> grades;
 
@@ -24,5 +25,11 @@ public class Student {
     }
     public void setName(String name){
         this.name = name;
+    }
+    public Integer getClasses() {
+        return classes;
+    }
+    public void setClasses(Integer classes) {
+        this.classes = classes;
     }
 }

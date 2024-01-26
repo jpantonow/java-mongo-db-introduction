@@ -33,8 +33,8 @@ public class Crud implements crud{
     }
     public boolean insert(Student obj){
         try{
-            this.create = new Create();
-            create.insert();
+            this.insert = new Insert();
+            insert.insert(obj);
             return true;
         }
         catch (Exception e){

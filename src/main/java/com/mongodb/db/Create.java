@@ -15,10 +15,8 @@ import java.util.List;
 public class Create extends Connection{
     public void creation(){
         try(MongoClient mongoclient = MongoClients.create(Create.connection)) {
-            MongoDatabase sample = mongoclient.getDatabase("sample_training");
-            MongoCollection<Document> gradesCollection = sample.getCollection("grades");
-//            Document student = insert();
-//            gradesCollection.insertOne(student);
+            MongoDatabase sample = mongoclient.getDatabase("mongo_java");
+            MongoCollection<Document> gradesCollection = sample.getCollection("school");
         }
         catch (MongoException e){
             e.printStackTrace();
