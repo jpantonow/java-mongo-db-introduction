@@ -2,28 +2,24 @@ package com.mongodb.tests;
 import com.mongodb.db.Create;
 import com.mongodb.db.Crud;
 import com.mongodb.user.Student;
-
+import com.mongodb.screens.Screen;
+import java.io.BufferedReader;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MongoTesting {
     public static void main(String[] args){
-    System.out.println("What operation do you want to do?");
-    System.out.println("1 - Insert");
-    System.out.println("2 - Update");
-    Student student = new Student();
-    Crud crud = new Crud();
-    ArrayList<Double> grades = new ArrayList<>();
-    grades.add(4.2);
-    grades.add(3.7);
-    grades.add(6.0);
+    Screen screen = new Screen();
+    Integer op = screen.Operations();
 
-    student.setId(1);
-    student.setClasses("C");
-    student.setGrades(grades);
+    Student student = new Student();
+    student = screen.screenInsert(student);
+
+    Crud crud = new Crud();
 
     //crud.create();
-    //crud.insert(student);
-    crud.update(student);
+    crud.insert(student);
+    //crud.update(student);
     System.out.println("Done");
     }
 }
