@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Connection {
-    protected static String connection = System.getenv("mongourl");
+    public static String connection = System.getenv("mongourl");
 
     public MongoClient initialize() {
         try (MongoClient mongoclient = MongoClients.create(connection)) {

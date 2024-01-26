@@ -1,4 +1,11 @@
-/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/quickstart/HelloMongoDb.java
+/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db/Insert.java
 /home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db/Create.java
+/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/tests/MongoTesting.java
+/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/user/Student.java
+/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db/Crud.java
 /home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/user/Viewer.java
+/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db/Update.java
 /home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db/Connection.java
+/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db/crud.java
+/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db/Read.java
+/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db/Delete.java

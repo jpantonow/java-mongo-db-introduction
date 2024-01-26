@@ -2,9 +2,9 @@ package com.mongodb.user;
 import java.util.ArrayList;
 public class Student {
     protected Integer id;
-    protected Integer classes;
+    protected String classes;
     protected String name;
-    protected ArrayList<Float> grades;
+    protected ArrayList<Double> grades;
 
     public Integer getId() {
         return id;
@@ -14,10 +14,10 @@ public class Student {
         this.id = id;
     }
 
-    public ArrayList<Float> getGrades(){
+    public ArrayList<Double> getGrades(){
         return grades;
     }
-    public void setGrades(ArrayList<Float> grades){
+    public void setGrades(ArrayList<Double> grades){
         this.grades = grades;
     }
     public String getName(){
@@ -26,10 +26,10 @@ public class Student {
     public void setName(String name){
         this.name = name;
     }
-    public Integer getClasses() {
+    public String getClasses() {
         return classes;
     }
-    public void setClasses(Integer classes) {
+    public void setClasses(String classes) {
         this.classes = classes;
     }
 }

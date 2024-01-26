@@ -1,4 +1,11 @@
+com/mongodb/db/Crud.class
+com/mongodb/db/crud.class
+com/mongodb/db/Insert.class
+com/mongodb/db/Delete.class
+com/mongodb/tests/MongoTesting.class
+com/mongodb/user/Student.class
+com/mongodb/db/Update.class
 com/mongodb/db/Create.class
-com/mongodb/quickstart/HelloMongoDb.class
+com/mongodb/db/Read.class
 com/mongodb/user/Viewer.class
 com/mongodb/db/Connection.class

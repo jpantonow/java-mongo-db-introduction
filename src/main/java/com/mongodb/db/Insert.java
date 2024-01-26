@@ -16,7 +16,7 @@ import java.util.List;
 public class Insert extends Connection {
     protected void insert(Student obj){
         try {
-            ArrayList<Float> grades = obj.getGrades();
+            ArrayList<Double> grades = obj.getGrades();
             Document student = new Document("id", obj.getId());
             student.append("class", obj.getClasses());
             student.append("name", obj.getName());
