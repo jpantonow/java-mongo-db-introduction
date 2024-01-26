@@ -17,6 +17,26 @@ public class Screen {
         Scanner sc = new Scanner(System.in);
         return sc.nextInt();
     }
+    public Student switchop(Integer op, Student obj){
+        switch(op){
+            case 1:
+                screenInsert(obj);
+                break;
+            case 2:
+                screenUpdate(obj);
+                break;
+            case 3:
+                screenFind();
+                break;
+            case 4:
+                screenDelete();
+                break;
+            case 5:
+                screenDrop();
+                break;
+        }
+        return obj;
+    }
     public Integer screenFind(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Write the student's Id:");

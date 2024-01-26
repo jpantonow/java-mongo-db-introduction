@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ea0e28c-5042-471a-a791-b1960b88caf0" name="Changes" comment="ok">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/screens/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/screens/Screen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +203,7 @@
       <workItem from="1706220472814" duration="14003000" />
       <workItem from="1706266427079" duration="874000" />
       <workItem from="1706269126337" duration="3305000" />
-      <workItem from="1706292032209" duration="1901000" />
+      <workItem from="1706292032209" duration="2235000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <option name="closed" value="true" />
