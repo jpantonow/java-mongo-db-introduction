@@ -25,7 +25,9 @@ public class Insert extends Connection {
                     new Document("2", grades.get(1)),
                     new Document("3", grades.get(2))
             ));
-            MongoCollection table = find_table();
+            MongoClient mongocli = MongoClients.create(connection);
+            MongoDatabase db = mongocli.getDatabase("mongo_java");
+            MongoCollection table = db.getCollection("school");
             table.insertOne(student);
         }
         catch (MongoException e){

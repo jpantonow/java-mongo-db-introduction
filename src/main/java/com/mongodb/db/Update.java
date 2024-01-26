@@ -9,6 +9,7 @@ import com.mongodb.client.model.ReturnDocument;
 import com.mongodb.client.model.UpdateOptions;
 import com.mongodb.client.result.UpdateResult;
 import com.mongodb.user.Student;
+import org.bson.BsonArray;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.json.JsonWriterSettings;
@@ -55,8 +56,12 @@ public class Update extends Connection{
             MongoCollection<Document> gradesCollection = sample.getCollection("school");
             Bson filter = eq("id", obj.getId());
             Bson new_class = set("class", obj.getClasses());
+            Bson grade1 = set("grades.0", obj.getGrades().get(0));
+            Bson grade2 = set("grades.1", obj.getGrades().get(1));
+            Bson grade3 = set("grades.2", obj.getGrades().get(2));
+
             //Bson new_grades = set("grades")
-            Bson updates = combine(new_class);
+            Bson updates = combine(new_class,grade1,grade2,grade3);
 
             //Old version
             Document oldversion = gradesCollection.findOneAndUpdate(filter,updates);

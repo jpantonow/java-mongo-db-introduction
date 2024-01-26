@@ -54,7 +54,7 @@ public class Crud implements crud{
     public boolean view(Student obj){
         try{
             this.read = new Read();
-            read.read_one("");
+            read.read_one(obj);
             return true;
         }
         catch (Exception e){
