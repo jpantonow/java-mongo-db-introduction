@@ -21,10 +21,11 @@ public class Crud implements crud{
             return false;
         }
     }
-    public boolean drop(){
+    public boolean drop(String str){
     try{
         this.delete = new Delete();
-        delete.delete_all();
+        //delete.delete_all();
+        delete.delete_all(str);
         return true;
     }
     catch (Exception e){

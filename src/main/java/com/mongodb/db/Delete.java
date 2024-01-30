@@ -52,10 +52,10 @@ public class Delete extends Connection{
             e.printStackTrace();
         }
     }
-    public void delete_all(){
+    public void delete_all(String str){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){
             MongoDatabase sample = mongoclient.getDatabase("sample_training");
-            MongoCollection<Document> gradesCollection = sample.getCollection("grades");
+            MongoCollection<Document> gradesCollection = sample.getCollection(str);
             gradesCollection.drop();
         }
         catch(MongoException e){

@@ -5,6 +5,8 @@ import com.mongodb.user.Student;
 import com.mongodb.screens.Screen;
 import java.io.BufferedReader;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class MongoTesting {
@@ -17,12 +19,42 @@ public class MongoTesting {
 
     Crud crud = new Crud();
 
+    Map<String,Student> objs = new HashMap<>();
+
+
+    while(true){
+        Integer op = screen.Operations();
+        objs = screen.switchop(op,student);
+        for(String i: objs.keySet()) {
+            if (objs.get(i) == null) {
+                crud.drop(i);
+                break;
+            }
+            student = objs.get(i);
+            switch (op){
+                case 1:
+                    crud.insert(student);
+                    break;
+                case 2:
+                    crud.update(student);
+                    break;
+                case 3:
+                    crud.view(student);
+                    break;
+                case 4:
+                    crud.delete(student);
+                    break;
+            }
+            break;
+        }
+
+    }
     //crud.create();
     //crud.insert(student);
     //crud.update(student);
-    student.setId(1);
-    Double average = crud.avg(student);
-    System.out.println(String.format("Average=%.2f", average));
-    System.out.println("Done");
+//    student.setId(1);
+//    Double average = crud.avg(student);
+//    System.out.println(String.format("Average=%.2f", average));
+//    System.out.println("Done");
     }
 }

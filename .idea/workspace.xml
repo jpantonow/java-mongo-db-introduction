@@ -7,11 +7,12 @@
     <list default="true" id="2ea0e28c-5042-471a-a791-b1960b88caf0" name="Changes" comment="ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Crud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Read.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Delete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/crud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/screens/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/screens/Screen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/tests/MongoTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/tests/MongoTesting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mongodb/db/Crud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mongodb/db/Crud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mongodb/screens/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mongodb/screens/Screen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mongodb/tests/MongoTesting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mongodb/tests/MongoTesting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mongodb/db/crud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mongodb/db/crud.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +210,8 @@
       <workItem from="1706220472814" duration="14003000" />
       <workItem from="1706266427079" duration="874000" />
       <workItem from="1706269126337" duration="3305000" />
-      <workItem from="1706292032209" duration="11580000" />
+      <workItem from="1706292032209" duration="15062000" />
+      <workItem from="1706653859308" duration="2400000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <option name="closed" value="true" />

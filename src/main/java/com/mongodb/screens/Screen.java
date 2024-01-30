@@ -3,6 +3,8 @@ package com.mongodb.screens;
 import com.mongodb.user.Student;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Screen {
@@ -17,35 +19,48 @@ public class Screen {
         Scanner sc = new Scanner(System.in);
         return sc.nextInt();
     }
-    public Student switchop(Integer op, Student obj){
+    public Map<String,Student> switchop(Integer op, Student obj){
+        String name = "";
         switch(op){
             case 1:
-                screenInsert(obj);
+                name += 1;
+                obj = screenInsert(obj);
                 break;
             case 2:
-                screenUpdate(obj);
+                name += 2;
+                obj = screenUpdate(obj);
                 break;
             case 3:
-                screenFind();
+                name += 3;
+                obj = screenFind();
                 break;
             case 4:
-                screenDelete();
+                name += 4;
+                obj = screenDelete();
                 break;
             case 5:
-                screenDrop();
+                obj = null;
+                name = screenDrop();
                 break;
         }
-        return obj;
+
+        Map<String, Student> ret = new HashMap<>();
+        ret.put(name,obj);
+        return ret;
     }
-    public Integer screenFind(){
+    public Student screenFind(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Write the student's Id:");
-        return sc.nextInt();
+        Student student = new Student();
+        student.setId(sc.nextInt());
+        return student;
     }
-    public Integer screenDelete(){
+    public Student screenDelete(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Write the student's Id:");
-        return sc.nextInt();
+        Student student = new Student();
+        student.setId(sc.nextInt());
+        return student;
     }
     public String screenDrop(){
         Scanner sc = new Scanner(System.in);
@@ -71,6 +86,13 @@ public class Screen {
         grades.add(sc.nextDouble());
         obj.setGrades(grades);
         return obj;
+    }
+    public void screenRead(Student obj){
+        System.out.println("\nShowing results:");
+        System.out.println("ID:" + obj.getId());
+        System.out.println("Name:" + obj.getName());
+        System.out.println("Class:" + obj.getClasses());
+        System.out.println("Grades:" + obj.getGrades());
     }
     public Student screenUpdate(Student obj){
         ArrayList<Double> grades = new ArrayList<>();
