@@ -39,7 +39,7 @@ public class MongoTesting {
                     crud.update(student);
                     break;
                 case 3:
-                    crud.view(student);
+                    screen.screenRead(crud.view(student));
                     break;
                 case 4:
                     crud.delete(student);

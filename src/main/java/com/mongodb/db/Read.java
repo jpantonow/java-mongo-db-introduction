@@ -23,18 +23,30 @@ import static java.lang.Float.parseFloat;
 
 public class Read extends Connection {
 
-    public void read_one(Student obj){
+    public Student read_one(Student obj){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){
             MongoDatabase sample = mongoclient.getDatabase("mongo_java");
             MongoCollection<Document> gradesCollection = sample.getCollection("school");
 
-            Document student1 = gradesCollection.find(new Document("id",obj.getId())).first();
-            Document student2 = gradesCollection.find(eq("id", 10000)).first();
-            System.out.println("Student 1: " + student1.toJson());
-
+            AggregateIterable<Document> found = gradesCollection.aggregate(
+                    Arrays.asList(
+                            Aggregates.match(
+                                    Filters.eq("id",obj.getId())),
+                    Aggregates.group("$id",
+                    Accumulators.addToSet("name","$name"),
+                    Accumulators.addToSet("class", "$class"),
+                    Accumulators.addToSet("grades", "$grades")
+            )));
+            obj.setId(Integer.parseInt(found.iterator().next().get("id").toString()));
+            obj.setName(found.iterator().next().get("name").toString());
+            obj.setClasses(found.iterator().next().get("class").toString());
+            //obj.setGrades(found.iterator().next().get("grades"));
+            System.out.println(found.iterator().next().get("grades").toString());
+            return obj;
         }
         catch (MongoException e){
             e.printStackTrace();
+            return null;
         }
     }
     public Double readavg(Student obj){

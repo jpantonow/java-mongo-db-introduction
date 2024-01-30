@@ -5,6 +5,6 @@ public interface crud {
     public boolean drop(String str);
     public boolean insert(Student obj);
     public boolean update(Student obj);
-    public boolean view(Student obj);
+    public Student view(Student obj);
     public boolean delete(Student obj);
 }

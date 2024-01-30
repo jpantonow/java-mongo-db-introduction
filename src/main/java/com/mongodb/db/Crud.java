@@ -52,14 +52,14 @@ public class Crud implements crud{
             return false;
         }
     }
-    public boolean view(Student obj){
+    public Student view(Student obj){
         try{
             this.read = new Read();
             read.read_one(obj);
-            return true;
+            return obj;
         }
         catch (Exception e){
-            return false;
+            return null;
         }
     }
     public double avg(Student obj){
