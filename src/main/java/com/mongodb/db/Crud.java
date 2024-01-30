@@ -55,8 +55,7 @@ public class Crud implements crud{
     public Student view(Student obj){
         try{
             this.read = new Read();
-            read.read_one(obj);
-            return obj;
+            return read.read_one(obj);
         }
         catch (Exception e){
             return null;

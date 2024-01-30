@@ -37,9 +37,16 @@ public class Read extends Connection {
                     Accumulators.addToSet("class", "$class"),
                     Accumulators.addToSet("grades", "$grades")
             )));
-            obj.setId(Integer.parseInt(found.iterator().next().get("id").toString()));
-            obj.setName(found.iterator().next().get("name").toString());
-            obj.setClasses(found.iterator().next().get("class").toString());
+            Integer id = Integer.parseInt(found.iterator().next().get("id").toString());
+            String name = found.iterator().next().get("name").toString();
+            String classes = found.iterator().next().get("class").toString();
+            obj.setId(id);
+            obj.setName(name);
+            obj.setClasses(classes);
+
+//            obj.setId(Integer.parseInt(found.iterator().next().get("id").toString()));
+//            obj.setName(found.iterator().next().get("name").toString());
+//            obj.setClasses(found.iterator().next().get("class").toString());
             //obj.setGrades(found.iterator().next().get("grades"));
             System.out.println(found.iterator().next().get("grades").toString());
             return obj;
