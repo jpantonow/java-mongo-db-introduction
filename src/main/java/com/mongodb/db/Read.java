@@ -29,21 +29,21 @@ public class Read extends Connection {
             MongoCollection<Document> gradesCollection = sample.getCollection("school");
 
             AggregateIterable<Document> found = gradesCollection.aggregate(
-                    Arrays.asList(
-                            Aggregates.match(
-                                    Filters.eq("id",obj.getId())),
+                    Arrays.asList(Aggregates.match(
+                            Filters.eq("id",obj.getId())),
                             Aggregates.unwind("$grades"),
                             Aggregates.group("$id",
-                    Accumulators.addToSet("name","$name"),
-                    Accumulators.addToSet("class", "$class"),Accumulators.push("grades","$grades")
+                                    Accumulators.addToSet("name","$name"),
+                                    Accumulators.addToSet("class", "$class"),
+                                    Accumulators.push("grades","$grades")
             )));
 
+            Document results = found.iterator().next();
+            //Integer id = Integer.parseInt(results.get("id").toString());
+            String name = results.get("name").toString();
+            String classes = results.get("class").toString();
 
-            Integer id = Integer.parseInt(found.iterator().next().get("id").toString());
-            String name = found.iterator().next().get("name").toString();
-            String classes = found.iterator().next().get("class").toString();
-
-            obj.setId(id);
+            //obj.setId(id);
             obj.setName(name);
             obj.setClasses(classes);
 
