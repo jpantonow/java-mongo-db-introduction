@@ -5,6 +5,7 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.DeleteResult;
+import com.mongodb.user.Student;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.json.JsonWriterSettings;
@@ -25,14 +26,13 @@ public class Delete extends Connection{
             e.printStackTrace();
         }
     }
-    public void find_and_delete(String doc){
+    public void find_and_delete(Student obj){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){
-            MongoDatabase samples = mongoclient.getDatabase("sample_training");
-            MongoCollection<Document> gradesCollection = samples.getCollection("grades");
+            MongoDatabase samples = mongoclient.getDatabase("mongo_java");
+            MongoCollection<Document> gradesCollection = samples.getCollection("school");
 
-            Bson filter = eq("student_id",10000);
+            Bson filter = eq("id",obj.getId());
             Document document = gradesCollection.findOneAndDelete(filter);
-            System.out.println(document.toJson(JsonWriterSettings.builder().indent(true).build()));
 
         }
         catch (MongoException e){

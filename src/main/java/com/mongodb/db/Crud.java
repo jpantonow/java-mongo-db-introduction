@@ -68,7 +68,7 @@ public class Crud implements crud{
     public boolean delete(Student obj){
         try{
             this.delete = new Delete();
-            delete.find_and_delete("");
+            delete.find_and_delete(obj);
             return true;
         }
         catch (Exception e){

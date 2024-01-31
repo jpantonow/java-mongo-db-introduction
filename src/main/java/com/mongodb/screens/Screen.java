@@ -95,7 +95,11 @@ public class Screen {
         System.out.println("Grades:" + obj.getGrades());
 
     }
-
+    public void screenPrint(String msg){
+        String greenColorCode = "\u001B[32m";
+        String resetColorCode = "\u001B[0m";
+        System.out.println(greenColorCode + msg + resetColorCode);
+    }
     public Student screenUpdate(Student obj){
         ArrayList<Double> grades = new ArrayList<>();
 

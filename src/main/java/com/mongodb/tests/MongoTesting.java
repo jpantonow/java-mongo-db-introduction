@@ -34,15 +34,19 @@ public class MongoTesting {
             switch (op){
                 case 1:
                     crud.insert(student);
+                    screen.screenPrint("Operation done successfully.");
                     break;
                 case 2:
                     crud.update(student);
+                    screen.screenPrint("Operation done successfully.");
                     break;
                 case 3:
                     screen.screenRead(crud.view(student));
+                    screen.screenPrint("Operation done successfully.");
                     break;
                 case 4:
                     crud.delete(student);
+                    screen.screenPrint("Operation done successfully.");
                     break;
             }
             break;
