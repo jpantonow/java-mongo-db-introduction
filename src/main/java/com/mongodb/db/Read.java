@@ -32,14 +32,17 @@ public class Read extends Connection {
                     Arrays.asList(
                             Aggregates.match(
                                     Filters.eq("id",obj.getId())),
-                    Aggregates.group("$id",
+                            Aggregates.unwind("$grades"),
+                            Aggregates.group("$id",
                     Accumulators.addToSet("name","$name"),
-                    Accumulators.addToSet("class", "$class"),
-                    Accumulators.addToSet("grades", "$grades")
+                    Accumulators.addToSet("class", "$class"),Accumulators.push("grades","$grades")
             )));
+
+
             Integer id = Integer.parseInt(found.iterator().next().get("id").toString());
             String name = found.iterator().next().get("name").toString();
             String classes = found.iterator().next().get("class").toString();
+
             obj.setId(id);
             obj.setName(name);
             obj.setClasses(classes);
