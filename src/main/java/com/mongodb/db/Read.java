@@ -35,20 +35,24 @@ public class Read extends Connection {
                             Aggregates.group("$id",
                                     Accumulators.addToSet("name","$name"),
                                     Accumulators.addToSet("class", "$class"),
-                                    Accumulators.push("grades","$grades")
+                                    Accumulators.addToSet("grades","$grades")
             )));
-
+            ArrayList<Double> grades = new ArrayList<>();
             Document results = found.iterator().next();
-            //Integer id = Integer.parseInt(results.get("id").toString());
             String name = results.get("name").toString();
             String classes = results.get("class").toString();
-            String grades = results.get("grades").toString();
 
+//            List grade2 = (List)results.get("grades");
+//            List grade = (List) grade2.get(0);
+//            grades.add(Double.parseDouble(grade.get(0).toString()));
+//            grades.add(Double.parseDouble(grade.get(1).toString()));
+//            grades.add(Double.parseDouble(grade.get(2).toString()));
 
             //obj.setId(id);
             obj.setName(name.substring(1,name.length()-1));
             //obj.setName(grades.substring(1,grades.length()-1));
             obj.setClasses(classes.substring(1,classes.length()-1));
+            //obj.setGrades(grades);
 
             return obj;
         }
