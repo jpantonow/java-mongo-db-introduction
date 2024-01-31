@@ -42,16 +42,14 @@ public class Read extends Connection {
             //Integer id = Integer.parseInt(results.get("id").toString());
             String name = results.get("name").toString();
             String classes = results.get("class").toString();
+            String grades = results.get("grades").toString();
+
 
             //obj.setId(id);
-            obj.setName(name);
-            obj.setClasses(classes);
+            obj.setName(name.substring(1,name.length()-1));
+            //obj.setName(grades.substring(1,grades.length()-1));
+            obj.setClasses(classes.substring(1,classes.length()-1));
 
-//            obj.setId(Integer.parseInt(found.iterator().next().get("id").toString()));
-//            obj.setName(found.iterator().next().get("name").toString());
-//            obj.setClasses(found.iterator().next().get("class").toString());
-            //obj.setGrades(found.iterator().next().get("grades"));
-            System.out.println(found.iterator().next().get("grades").toString());
             return obj;
         }
         catch (MongoException e){
