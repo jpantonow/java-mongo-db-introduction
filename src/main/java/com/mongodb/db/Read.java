@@ -22,7 +22,12 @@ import static java.lang.Double.parseDouble;
 import static java.lang.Float.parseFloat;
 
 public class Read extends Connection {
-
+    private boolean check_null(List doc, Integer pos){
+        return Integer.parseInt(doc.get(pos).toString()) == 0;
+    }
+    private ArrayList<Double> fill_arr(ArrayList<Double> g, List doc){
+        //for(String i: )
+    }
     public Student read_one(Student obj){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){
             MongoDatabase sample = mongoclient.getDatabase("mongo_java");
@@ -42,6 +47,8 @@ public class Read extends Connection {
             String name = results.get("name").toString();
             String classes = results.get("class").toString();
             List grades_rcv = (List)results.get("grades");
+            if(!check_null(grades_rcv,0))
+
             String grade1 = grades_rcv.get(0).toString().substring(grades_rcv.get(0).toString().indexOf("=")+1,grades_rcv.get(0).toString().indexOf("}"));
             String grade2 = grades_rcv.get(1).toString().substring(grades_rcv.get(1).toString().indexOf("=")+1,grades_rcv.get(1).toString().indexOf("}"));
             String grade3 = grades_rcv.get(2).toString().substring(grades_rcv.get(2).toString().indexOf("=")+1,grades_rcv.get(2).toString().indexOf("}"));

@@ -105,6 +105,8 @@ public class Screen {
 
         System.out.println("Fill the values below: ");
         Scanner sc = new Scanner(System.in);
+        System.out.println("ID:");
+        obj.setId(sc.nextInt());
         System.out.println("Class:");
         obj.setClasses(sc.next());
         System.out.println("1st exam:");
