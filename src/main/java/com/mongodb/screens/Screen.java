@@ -93,7 +93,9 @@ public class Screen {
         System.out.println("Name:" + obj.getName());
         System.out.println("Class:" + obj.getClasses());
         System.out.println("Grades:" + obj.getGrades());
+
     }
+
     public Student screenUpdate(Student obj){
         ArrayList<Double> grades = new ArrayList<>();
 

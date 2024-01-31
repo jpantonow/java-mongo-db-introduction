@@ -49,12 +49,6 @@ public class MongoTesting {
         }
 
     }
-    //crud.create();
-    //crud.insert(student);
-    //crud.update(student);
-//    student.setId(1);
-//    Double average = crud.avg(student);
-//    System.out.println(String.format("Average=%.2f", average));
-//    System.out.println("Done");
+
     }
 }
