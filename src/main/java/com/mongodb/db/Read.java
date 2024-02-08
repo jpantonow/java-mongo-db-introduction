@@ -11,6 +11,7 @@ import com.mongodb.user.Student;
 import org.bson.BsonDocument;
 import org.bson.Document;
 
+import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -107,9 +108,10 @@ public class Read extends Connection {
             );
 
             String results = null;
-            if(approved.iterator().hasNext()){
-                results += approved.iterator().next().toString() + " ";
+            for(Document doc: approved){
+                results += "name:" + doc.get("name").toString() + ",avg:" + doc.get("avg").toString() + "\n";
             }
+
             return results;
         }
         catch (MongoException e){

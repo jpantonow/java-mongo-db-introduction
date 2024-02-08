@@ -208,7 +208,7 @@
       <workItem from="1706292032209" duration="15062000" />
       <workItem from="1706653859308" duration="13350000" />
       <workItem from="1706693999003" duration="4691000" />
-      <workItem from="1707422685508" duration="7620000" />
+      <workItem from="1707422685508" duration="8105000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <option name="closed" value="true" />
@@ -303,11 +303,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/mongodb/tests/src/Main.java</url>
           <line>11</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/mongodb/db/Read.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
