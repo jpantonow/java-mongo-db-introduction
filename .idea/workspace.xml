@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ea0e28c-5042-471a-a791-b1960b88caf0" name="Changes" comment="ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Crud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/Read.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/db/crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/db/crud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/screens/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/screens/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mongodb/tests/MongoTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mongodb/tests/MongoTesting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mongodb/db/Crud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mongodb/db/Crud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mongodb/db/crud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mongodb/db/crud.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mongodb/db/Read.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mongodb/db/Read.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,39 +50,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;Application.HelloMongoDb.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MongoTesting.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.Viewer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.mongodb.quickstart.HelloMongoDb.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.mongodb.tests.HelloMongoDb.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;updates&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/quickstart/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Application.HelloMongoDb.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MongoTesting.executor": "Run",
+    "Application.Viewer.executor": "Run",
+    "Application.com.mongodb.quickstart.HelloMongoDb.executor": "Run",
+    "Application.com.mongodb.tests.HelloMongoDb.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "updates",
+    "jdk.selected.JAVA_MODULE": "corretto-11",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/db",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/jpantonow/Documents/Estudos/Java/java-mongo-db-introduction/src/main/java/com/mongodb/quickstart/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/mongodb/db" />
@@ -213,7 +208,7 @@
       <workItem from="1706292032209" duration="15062000" />
       <workItem from="1706653859308" duration="13350000" />
       <workItem from="1706693999003" duration="4691000" />
-      <workItem from="1707422685508" duration="2702000" />
+      <workItem from="1707422685508" duration="7620000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <option name="closed" value="true" />
@@ -311,8 +306,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/mongodb/db/Read.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="33" />
+          <line>79</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
