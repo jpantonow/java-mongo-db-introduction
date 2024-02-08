@@ -17,6 +17,7 @@ public class Screen {
         System.out.println("5 - Drop");
         System.out.println("6 - Approved");
         System.out.println("7 - Failed ");
+        System.out.println("8 - Show avg");
 
         Scanner sc = new Scanner(System.in);
         return sc.nextInt();
@@ -52,6 +53,10 @@ public class Screen {
             case 7:
                 obj = null;
                 name = "N";
+            case 8:
+                name += 8;
+                obj = screenFind();
+                break;
         }
 
         Map<String, Student> ret = new HashMap<>();
@@ -135,7 +140,14 @@ public class Screen {
         obj.setGrades(grades);
         return obj;
     }
-
+    public void screenAvg(Student obj,String avg){
+        try {
+            System.out.println("Student:" + obj.getName());
+            System.out.println("Average:" + avg);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     public void screenApproved(String results) {
         try {
             System.out.println("Showing approved students:");

@@ -49,7 +49,7 @@ public class MongoTesting {
                     screen.screenPrint("Operation done successfully.");
                     break;
                 case 5:
-                    crud.drop("grades");
+                    crud.drop(screen.screenDrop());
                     screen.screenPrint("Operation done successfully.");
                     break;
                 case 6:
@@ -63,6 +63,10 @@ public class MongoTesting {
                     screen.screenFailed(result_set2);
                     screen.screenPrint("Operation done successfully.");
                     break;
+                case 8:
+                    student = objs.get(i);
+                    String avg = String.format("%.2f",crud.show_avg(student));
+                    screen.screenPrint("Operation done successfully.");
 
             }
             break;

@@ -9,4 +9,5 @@ public interface crud {
     public boolean delete(Student obj);
     public String approved();
     public String disapproved();
+    public Double show_avg(Student obj);
 }

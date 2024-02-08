@@ -176,12 +176,32 @@ public class Read extends Connection {
                             Filters.eq("id",obj.getId())),
                     Aggregates.unwind("$grades"),
                     Aggregates.group("$id",
-                            Accumulators.avg("average","$grades"))
+                            Accumulators.avg("averageGrade1", "$grades.1"),
+                            Accumulators.avg("averageGrade2", "$grades.2"),
+                            Accumulators.avg("averageGrade3", "$grades.3")
+                            ),
+                            Aggregates.project(
+                                    Projections.fields(
+                                            Projections.excludeId(),
+                                            Projections.include("name", "grades"),
+                                            Projections.computed("avg",
+                                                    new Document("$round",
+                                                            Arrays.asList(
+                                                                    new Document("$avg",
+                                                                            Arrays.asList("$averageGrade1", "$averageGrade2", "$averageGrade3")
+                                                                    ),
+                                                                    2
+                                                            )
+                                                    )
+                                            )
+                                    )
+                            )
                             ));
 
-            String average = avg.iterator().next().get("average").toString();
+            Document doc_average = avg.iterator().next();
+            String average = doc_average.get("average").toString();
             return parseDouble(average);
-            //return parseDouble(avg.iterator().next().get("average"));
+
         }
         catch (MongoException e){
             e.printStackTrace();

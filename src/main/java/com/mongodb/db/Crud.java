@@ -73,6 +73,10 @@ public class Crud implements crud{
         this.read = new Read();
         return read.read_failed();
     }
+    public Double show_avg(Student obj){
+        this.read = new Read();
+        return read.readavg(obj);
+    }
     public boolean delete(Student obj){
         try{
             this.delete = new Delete();
