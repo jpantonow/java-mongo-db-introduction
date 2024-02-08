@@ -7,4 +7,5 @@ public interface crud {
     public boolean update(Student obj);
     public Student view(Student obj);
     public boolean delete(Student obj);
+    public String approved();
 }

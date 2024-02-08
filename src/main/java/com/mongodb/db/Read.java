@@ -25,9 +25,9 @@ public class Read extends Connection {
     private boolean check_null(List doc, Integer pos){
         return Integer.parseInt(doc.get(pos).toString()) == 0;
     }
-    private ArrayList<Double> fill_arr(ArrayList<Double> g, List doc){
-        //for(String i: )
-    }
+//    private ArrayList<Double> fill_arr(ArrayList<Double> g, List doc){
+//        //for(String i: )
+//    }
     public Student read_one(Student obj){
         try(MongoClient mongoclient = MongoClients.create(Connection.connection)){
             MongoDatabase sample = mongoclient.getDatabase("mongo_java");
@@ -47,16 +47,16 @@ public class Read extends Connection {
             String name = results.get("name").toString();
             String classes = results.get("class").toString();
             List grades_rcv = (List)results.get("grades");
-            if(!check_null(grades_rcv,0))
+            if(!check_null(grades_rcv,0)) {
 
-            String grade1 = grades_rcv.get(0).toString().substring(grades_rcv.get(0).toString().indexOf("=")+1,grades_rcv.get(0).toString().indexOf("}"));
-            String grade2 = grades_rcv.get(1).toString().substring(grades_rcv.get(1).toString().indexOf("=")+1,grades_rcv.get(1).toString().indexOf("}"));
-            String grade3 = grades_rcv.get(2).toString().substring(grades_rcv.get(2).toString().indexOf("=")+1,grades_rcv.get(2).toString().indexOf("}"));
+                String grade1 = grades_rcv.get(0).toString().substring(grades_rcv.get(0).toString().indexOf("=") + 1, grades_rcv.get(0).toString().indexOf("}"));
+                String grade2 = grades_rcv.get(1).toString().substring(grades_rcv.get(1).toString().indexOf("=") + 1, grades_rcv.get(1).toString().indexOf("}"));
+                String grade3 = grades_rcv.get(2).toString().substring(grades_rcv.get(2).toString().indexOf("=") + 1, grades_rcv.get(2).toString().indexOf("}"));
 
-            grades.add(Double.parseDouble(grade1));
-            grades.add(Double.parseDouble(grade2));
-            grades.add(Double.parseDouble(grade3));
-
+                grades.add(Double.parseDouble(grade1));
+                grades.add(Double.parseDouble(grade2));
+                grades.add(Double.parseDouble(grade3));
+            }
             //obj.setId(id);
             obj.setName(name.substring(1,name.length()-1));
             //obj.setName(grades.substring(1,grades.length()-1));
@@ -64,6 +64,27 @@ public class Read extends Connection {
             obj.setGrades(grades);
 
             return obj;
+        }
+        catch (MongoException e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public String read_approved(){
+        try(MongoClient mongoclient = MongoClients.create(Connection.connection)){
+            MongoDatabase sample = mongoclient.getDatabase("mongo_java");
+            MongoCollection<Document> gradesCollection = sample.getCollection("school");
+
+            AggregateIterable<Document> approved = gradesCollection.aggregate(
+                    Arrays.asList(
+                            Aggregates.unwind("$grades"),
+                            Aggregates.group("$name",Accumulators.avg("avg","$grades")),
+                            Aggregates.match(Filters.gte("avg",5.0))
+                            ));
+
+            Document docapproved = approved.iterator().next();
+            String results = docapproved.get("avg").toString();
+            return results;
         }
         catch (MongoException e){
             e.printStackTrace();

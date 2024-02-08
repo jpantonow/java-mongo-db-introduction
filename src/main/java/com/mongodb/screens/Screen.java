@@ -15,6 +15,8 @@ public class Screen {
         System.out.println("3 - Read");
         System.out.println("4 - Delete");
         System.out.println("5 - Drop");
+        System.out.println("6 - Approved");
+        System.out.println("7 - Failed ");
 
         Scanner sc = new Scanner(System.in);
         return sc.nextInt();
@@ -41,6 +43,8 @@ public class Screen {
             case 5:
                 obj = null;
                 name = screenDrop();
+                break;
+            case 6:
                 break;
         }
 
@@ -118,4 +122,17 @@ public class Screen {
         obj.setGrades(grades);
         return obj;
     }
+//    public ArrayList<Student> screenApproved(ArrayList<Student> objs){
+//        try{
+//        Integer count = 0;
+//        System.out.println("Showing avg. grades:");
+//        for(Student i: objs){
+//            if(i!=null){
+//                System.out.println(count + "-" + )
+//            }
+//        }
+//    }
+//        catch(Exception e){
+//
+//        }
 }

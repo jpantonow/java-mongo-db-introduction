@@ -65,6 +65,10 @@ public class Crud implements crud{
         this.read = new Read();
         return read.readavg(obj);
     }
+    public String approved(){
+        this.read = new Read();
+        return read.read_approved();
+    }
     public boolean delete(Student obj){
         try{
             this.delete = new Delete();
