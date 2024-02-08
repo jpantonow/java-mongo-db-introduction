@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Screen {
-    public Integer Operations(){
+    public Integer Operations() {
         System.out.println("What operation do you want to do?");
         System.out.println("1 - Insert");
         System.out.println("2 - Update");
@@ -21,9 +21,10 @@ public class Screen {
         Scanner sc = new Scanner(System.in);
         return sc.nextInt();
     }
-    public Map<String,Student> switchop(Integer op, Student obj){
+
+    public Map<String, Student> switchop(Integer op, Student obj) {
         String name = "";
-        switch(op){
+        switch (op) {
             case 1:
                 name += 1;
                 obj = screenInsert(obj);
@@ -45,33 +46,42 @@ public class Screen {
                 name = screenDrop();
                 break;
             case 6:
+                obj = null;
+                name = "Y";
                 break;
+            case 7:
+                obj = null;
+                name = "N";
         }
 
         Map<String, Student> ret = new HashMap<>();
-        ret.put(name,obj);
+        ret.put(name, obj);
         return ret;
     }
-    public Student screenFind(){
+
+    public Student screenFind() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Write the student's Id:");
         Student student = new Student();
         student.setId(sc.nextInt());
         return student;
     }
-    public Student screenDelete(){
+
+    public Student screenDelete() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Write the student's Id:");
         Student student = new Student();
         student.setId(sc.nextInt());
         return student;
     }
-    public String screenDrop(){
+
+    public String screenDrop() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Write the table's name:");
         return sc.next();
     }
-    public Student screenInsert(Student obj){
+
+    public Student screenInsert(Student obj) {
         ArrayList<Double> grades = new ArrayList<>();
 
         System.out.println("Fill the values below: ");
@@ -91,7 +101,8 @@ public class Screen {
         obj.setGrades(grades);
         return obj;
     }
-    public void screenRead(Student obj){
+
+    public void screenRead(Student obj) {
         System.out.println("\nShowing results:");
         System.out.println("ID:" + obj.getId());
         System.out.println("Name:" + obj.getName());
@@ -99,12 +110,14 @@ public class Screen {
         System.out.println("Grades:" + obj.getGrades());
 
     }
-    public void screenPrint(String msg){
+
+    public void screenPrint(String msg) {
         String greenColorCode = "\u001B[32m";
         String resetColorCode = "\u001B[0m";
         System.out.println(greenColorCode + msg + resetColorCode);
     }
-    public Student screenUpdate(Student obj){
+
+    public Student screenUpdate(Student obj) {
         ArrayList<Double> grades = new ArrayList<>();
 
         System.out.println("Fill the values below: ");
@@ -122,17 +135,21 @@ public class Screen {
         obj.setGrades(grades);
         return obj;
     }
-//    public ArrayList<Student> screenApproved(ArrayList<Student> objs){
-//        try{
-//        Integer count = 0;
-//        System.out.println("Showing avg. grades:");
-//        for(Student i: objs){
-//            if(i!=null){
-//                System.out.println(count + "-" + )
-//            }
-//        }
-//    }
-//        catch(Exception e){
-//
-//        }
+
+    public void screenApproved(String results) {
+        try {
+            System.out.println("Showing approved students:");
+            System.out.println(results);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void screenFailed(String results) {
+        try {
+            System.out.println("Showing students who failed:");
+            System.out.println(results);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

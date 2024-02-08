@@ -8,4 +8,5 @@ public interface crud {
     public Student view(Student obj);
     public boolean delete(Student obj);
     public String approved();
+    public String disapproved();
 }

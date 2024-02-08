@@ -22,43 +22,53 @@ public class MongoTesting {
     Map<String,Student> objs = new HashMap<>();
 
     System.out.println(crud.approved());
-//    while(true){
-//        Integer op = screen.Operations();
-//        objs = screen.switchop(op,student);
-//        for(String i: objs.keySet()) {
-//            if (objs.get(i) == null) {
-//                crud.drop(i);
-//                break;
-//            }
-//            student = objs.get(i);
-//            switch (op){
-//                case 1:
-//                    crud.insert(student);
-//                    screen.screenPrint("Operation done successfully.");
-//                    break;
-//                case 2:
-//                    crud.update(student);
-//                    screen.screenPrint("Operation done successfully.");
-//                    break;
-//                case 3:
-//                    screen.screenRead(crud.view(student));
-//                    screen.screenPrint("Operation done successfully.");
-//                    break;
-//                case 4:
-//                    crud.delete(student);
-//                    screen.screenPrint("Operation done successfully.");
-//                    break;
-//                case 5:
-//                    crud.drop("");
-//                    screen.screenPrint("Operation done successfully.");
-//                    break;
-//                case 6:
-//
-//            }
-//            break;
-//        }
-//
-//    }
+    while(true){
+        Integer op = screen.Operations();
+        objs = screen.switchop(op,student);
+        for(String i: objs.keySet()) {
+
+            switch (op){
+                case 1:
+                    student = objs.get(i);
+                    crud.insert(student);
+                    screen.screenPrint("Operation done successfully.");
+                    break;
+                case 2:
+                    student = objs.get(i);
+                    crud.update(student);
+                    screen.screenPrint("Operation done successfully.");
+                    break;
+                case 3:
+                    student = objs.get(i);
+                    screen.screenRead(crud.view(student));
+                    screen.screenPrint("Operation done successfully.");
+                    break;
+                case 4:
+                    student = objs.get(i);
+                    crud.delete(student);
+                    screen.screenPrint("Operation done successfully.");
+                    break;
+                case 5:
+                    crud.drop("grades");
+                    screen.screenPrint("Operation done successfully.");
+                    break;
+                case 6:
+                    String result_set = crud.approved();
+                    screen.screenApproved(result_set);
+                    screen.screenPrint("Operation done successfully.");
+                    break;
+
+                case 7:
+                    String result_set2 = crud.disapproved();
+                    screen.screenFailed(result_set2);
+                    screen.screenPrint("Operation done successfully.");
+                    break;
+
+            }
+            break;
+        }
+
+    }
 
     }
 }
