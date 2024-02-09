@@ -199,7 +199,7 @@ public class Read extends Connection {
                             ));
 
             Document doc_average = avg.iterator().next();
-            String average = doc_average.get("average").toString();
+            String average = doc_average.get("avg").toString();
             return parseDouble(average);
 
         }

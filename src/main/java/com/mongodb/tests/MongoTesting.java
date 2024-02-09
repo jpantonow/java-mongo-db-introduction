@@ -21,7 +21,6 @@ public class MongoTesting {
 
     Map<String,Student> objs = new HashMap<>();
 
-    System.out.println(crud.approved());
     while(true){
         Integer op = screen.Operations();
         objs = screen.switchop(op,student);
@@ -65,7 +64,8 @@ public class MongoTesting {
                     break;
                 case 8:
                     student = objs.get(i);
-                    String avg = String.format("%.2f",crud.show_avg(student));
+                    String avg = "" + crud.show_avg(student);
+                    screen.screenAvg(student,avg);
                     screen.screenPrint("Operation done successfully.");
 
             }
