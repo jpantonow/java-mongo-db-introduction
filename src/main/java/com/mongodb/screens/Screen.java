@@ -142,7 +142,7 @@ public class Screen {
     }
     public void screenAvg(Student obj,String avg){
         try {
-            System.out.println("Student:" + obj.getName());
+            System.out.println("Student:" + obj.getId());
             System.out.println("Average:" + avg);
         } catch (Exception e) {
             e.printStackTrace();
